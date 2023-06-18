@@ -1,12 +1,11 @@
-const inputImage = document.querySelector('#inputImage');
-const skinSel = document.querySelector('#skin-sel');
+function displaySelectedFile(event) {
+    var file = event.target.files[0];
+    var reader = new FileReader();
 
-inputImage.addEventListener('change', function() {
-    if (this.files && this.files[0]) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            skinSel.src = e.target.result;
-        }
-        reader.readAsDataURL(this.files[0]);
-    }
-});
+    reader.onload = function(event) {
+        var image = document.getElementById("skin-sel");
+        image.setAttribute('src', event.target.result);
+      };      
+
+    reader.readAsDataURL(file);
+}
