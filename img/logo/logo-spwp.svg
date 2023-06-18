@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 27.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+	 viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#0C751B;}
-	.st1{fill:#4FC65D;}
+	.st0{fill:#769964;}
 </style>
-<path class="st0" d="M73.9,79.15h-48c-2.76,0-5-2.24-5-5v-48c0-2.76,2.24-5,5-5h48c2.76,0,5,2.24,5,5v48
-	C78.9,76.91,76.66,79.15,73.9,79.15z"/>
-<path class="st1" d="M64.27,69.15H35.53c-2.56,0-4.63-2.07-4.63-4.63V35.78c0-2.56,2.07-4.63,4.63-4.63h28.74
-	c2.56,0,4.63,2.07,4.63,4.63v28.74C68.9,67.08,66.83,69.15,64.27,69.15z"/>
+<path class="st0" d="M33.94,0.05H6.06c-3.32,0-6.01,2.69-6.01,6.01v27.88c0,3.32,2.69,6.01,6.01,6.01h27.88
+	c3.32,0,6.01-2.69,6.01-6.01V6.06C39.95,2.74,37.26,0.05,33.94,0.05z M32.49,29.16c0,1.84-1.49,3.33-3.33,3.33H10.84
+	C9,32.49,7.51,31,7.51,29.16V10.84C7.51,9,9,7.51,10.84,7.51h18.31c1.84,0,3.33,1.49,3.33,3.33L32.49,29.16L32.49,29.16z"/>
 </svg>

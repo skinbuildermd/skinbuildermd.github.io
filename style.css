@@ -16,16 +16,14 @@ html {
     padding-bottom: .5rem;
     background-color: #101110;
 }
-
+.logo img {
+    width: 100px;
+}
 .logo a {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-}
-.logo h4 {
-    padding-left: .7rem;
-    font-weight: none;
 }
 #logo-site:hover {
     fill: #e0751c;
