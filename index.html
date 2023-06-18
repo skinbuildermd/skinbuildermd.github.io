@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://baguettecss.github.io/v1/v1.css">
     <link rel="shortcut icon" href="./img/logo/logo-spwp.svg" type="image/x-icon">
 
+    <!--Скрипты-->
+    <script src="./js/garderob.js"></script>
+    <script src="./js/selected-file.js"></script>
+    <script src="./js/auto-add-verh.js"></script>
+    <script src="./js/auto-add-nogi.js"></script>
     <title>SkinBuilder</title>
 </head>
 <body>
@@ -34,7 +39,6 @@
             <div class="skin -br">
                 <div class="pix-skin">
                     <img id="skin-sel" src="./img/air.png" alt="">
-                    <img id="verh-pixel" src="./img/air.png" alt="">
                 </div>
                 <div class="skompil">
                     <label class="change-btn -br" for="inputImage">
@@ -49,61 +53,16 @@
             <div class="at">
                 <div class="clothes -br">
                     <div class="c hj"></div>
-                    <div class="c selected" onclick="selectUpperClothes(this)"><img class="verh" src="./img/skins/models/mod_1!Milyan.png" alt="Верхняя одежда"></div>
-                    <div class="c" onclick="selectLowerClothes(this)"><img class="nogi" src="./img/skins/models/mod_2!Milyan.png" alt="Нижняя одежда"></div>
-                    <div class="c"></div>
+                    <div class="c verh selected"><img class="verh" src="./img/models/verh/verh_1.png"></div>
+                    <div class="c nogi"><img src="./img/models/nogi/nogi_1.png"></div>
+                    <div class="c obuv"></div>
                 </div>                
                 <div class="all-cloat -br">
                     <div class="all-cloat-scroll">
-                        <div class="w"><img src="./img/skins/models/mod_1!Milyan.png" alt="верхняя-1"></div>
-                        <div class="w" onclick="changeClothes()"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
-                        <div class="w"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="./js/index.js"></script>
 </body>
 </html>
