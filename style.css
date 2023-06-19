@@ -311,9 +311,12 @@ html {
 .selected {
     border: #ffffffe1 2px outset;
 }
-#verh img{
+.installed img{
     width: 100px;
     height: 100px;
+}
+.installed img:hover {
+    transform: scale(1.1);
 }
 .n {
     width: 95px;

@@ -23,14 +23,14 @@
             <div class="pre-skin">
                 <div class="adds-skins -br">
                     <div id="golova" class="installed"></div>
-                    <div id="verh" class="installed"></div>
+                    <div id="verh" class="installed"></div>                    
                     <div id="nogi" class="installed"></div>
                     <div id="obuv" class="installed"></div>
                 </div>
             </div>
             <div class="skin -br">
                 <div class="pix-skin">
-                    <img id="skin-sel" src="/img/air.png" alt="">
+                    <img id="skin-sel" src="img/air.png" alt="">
                 </div>
                 <div class="skompil">
                     <label class="change-btn -br" for="inputImage">
@@ -46,19 +46,19 @@
                 <div class="clothes -br">
                     <div class="c hj"></div>
                     <div class="c verh selected" onclick="changeClothes('verh')"><img class="verh" src="./img/models/verh/verh_1.png"></div>
-                    <div class="c nogi" onclick="changeClothes('nogi')"><img src="./img/models/nogi/nogi_1.png"></div>
+                    <div class="c nogi" id="nogi-add" onclick="changeClothes('nogi')"><img src="./img/models/nogi/nogi_1.png"></div>
                     <div class="c obuv" onclick="changeClothes('obuv')"></div>
                 </div>
                 <div class="all-cloat -br">
                     <div class="all-cloat-scroll">
                         <div class="w" onclick="changeVerhImage(this)">
-                            <img src="./img/models/verh/verh_1.png" alt="">
+                            <img id="verh-go" src="./img/models/verh/verh_1.png" alt="">
                         </div>
                         <div class="w" onclick="changeVerhImage(this)">
-                            <img src="./img/models/verh/verh_2.png" alt="">
+                            <img id="verh-go" src="./img/models/verh/verh_2.png" alt="">
                         </div>
                         <div class="w" onclick="changeVerhImage(this)">
-                            <img src="./img/models/verh/verh_3.png" alt="">
+                            <img id="verh-go" src="./img/models/verh/verh_3.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -77,92 +77,132 @@
 
             reader.readAsDataURL(file);
         }
-
-        function changeVerhImage(element) {
-            var imageSrc = element.querySelector('img').getAttribute('src');
-            var verhElement = document.getElementById('verh');
-            verhElement.innerHTML = '<img class="verh" src="' + imageSrc + '">';
-        }
-
+        
+        
         function changeClothes(clothesType) {
             var images = document.querySelectorAll('.w img');
             var selectedNogi = document.querySelector('.nogi.selected');
-            var wElement = document.querySelector('.w');
-          
+            var nogiElement = document.getElementById('nogi');
+            var wElements = document.querySelectorAll('.w');
+        
             if (clothesType === 'nogi') {
-              images.forEach(function(image) {
-                var src = image.getAttribute('src');
-                var newSrc = src.replace('/verh/', '/nogi/').replace('verh_', 'nogi_');
-                image.setAttribute('src', newSrc);
-              });
-          
-              if (selectedNogi && wElement) {
-                if (selectedNogi.classList.contains('selected')) {
-                  wElement.setAttribute('id', 'nogi-sel');
-                } else {
-                  wElement.removeAttribute('id');
+                images.forEach(function (image) {
+                    var src = image.getAttribute('src');
+                    var newSrc = src.replace('/verh/', '/nogi/').replace('verh_', 'nogi_');
+                    image.src = newSrc;
+                    image.id = 'nogi-go';
+                });
+        
+                if (selectedNogi) {
+                    if (selectedNogi.classList.contains('selected')) {
+                        selectedNogi.innerHTML = '<img class="nogi" src="' + wElements[0].querySelector('img').getAttribute('src') + '">';
+                    }
                 }
-              }
+        
+                wElements.forEach(function (wElement) {
+                    var image = wElement.querySelector('img');
+                    if (image && image.getAttribute('id') === 'verh-go') {
+                        image.removeAttribute('id');
+                    }
+                });
             } else if (clothesType === 'verh') {
-              images.forEach(function(image) {
-                var src = image.getAttribute('src');
-                var newSrc = src.replace('/nogi/', '/verh/').replace('nogi_', 'verh_');
-                image.setAttribute('src', newSrc);
-              });
-          
-              wElement.removeAttribute('id');
+                images.forEach(function (image) {
+                    var src = image.getAttribute('src');
+                    var newSrc = src.replace('/nogi/', '/verh/').replace('nogi_', 'verh_');
+                    image.src = newSrc;
+                    image.removeAttribute('id');
+                });
+        
+                wElements.forEach(function (wElement) {
+                    var image = wElement.querySelector('img');
+                    if (image && image.getAttribute('id') !== 'verh-go') {
+                        image.id = 'verh-go';
+                    }
+                });
             }
-          }          
+        }                              
+        
+        var verhGoElements = document.querySelectorAll(".w img[id^='verh-go']");
 
-        function compileSkin() {
+// Получаем все элементы с классом "verh-go"
+var verhGoElements = document.querySelectorAll("[id^='verh-go']");
+
+// Добавляем обработчик событий к каждому элементу
+verhGoElements.forEach(function(element) {
+  element.addEventListener("click", function() {
+    var imageUrl = this.src;
+    var image = document.createElement("img");
+    image.src = imageUrl;
+    image.alt = "Image";
+
+    if (this.id === "nogi-go") {
+      var divNogi = document.getElementById("nogi");
+      divNogi.innerHTML = ""; // Очищаем содержимое блока "nogi"
+      divNogi.appendChild(image);
+    } else {
+      var divInstalled = document.createElement("div");
+      divInstalled.classList.add("installed");
+      divInstalled.id = "verh";
+      divInstalled.appendChild(image);
+
+      var existingDivVerh = document.getElementById("verh");
+      existingDivVerh.parentNode.replaceChild(divInstalled, existingDivVerh);
+    }
+  });
+});
+
+          function compileSkin() {
             var selectedFile = document.getElementById('inputImage').files[0];
             var clothesElement = document.getElementById('verh');
             var clothesImage = clothesElement.querySelector('img');
             var clothesSrc = clothesImage.getAttribute('src');
           
-            var canvas = document.createElement('canvas');
-            var ctx = canvas.getContext('2d');
-            var img = new Image();
+            if (clothesElement.id !== 'nogi') {
+              // Продолжить только если выбран верхний элемент (не штаны)
+              var canvas = document.createElement('canvas');
+              var ctx = canvas.getContext('2d');
+              var img = new Image();
           
-            img.onload = function () {
-              canvas.width = img.width;
-              canvas.height = img.height;
-              ctx.drawImage(img, 0, 0);
+              img.onload = function () {
+                canvas.width = img.width;
+                canvas.height = img.height;
+                ctx.drawImage(img, 0, 0);
           
-              var installedImage = document.querySelector('#verh.installed img');
-              if (installedImage) {
-                var imageSrc = installedImage.src.replace('models', 'skins');
-                var fileName = imageSrc.split('/').pop();
-                clothesSrc = './img/skins/verh/' + fileName;
-              }
+                var installedImage = document.querySelector('#verh.installed img');
+                if (installedImage) {
+                  var imageSrc = installedImage.src.replace('models', 'skins');
+                  var fileName = imageSrc.split('/').pop();
+                  clothesSrc = './img/skins/verh/' + fileName;
+                }
           
-              var clothesImg = new Image();
-              clothesImg.onload = function () {
-                ctx.drawImage(clothesImg, 0, 0, img.width, img.height);
+                var clothesImg = new Image();
+                clothesImg.onload = function () {
+                  ctx.drawImage(clothesImg, 0, 0, img.width, img.height);
           
-                var downloadLink = document.createElement('a');
-                downloadLink.href = canvas.toDataURL();
-                downloadLink.download = 'compiled_skin.png';
-                downloadLink.click();
+                  var downloadLink = document.createElement('a');
+                  downloadLink.href = canvas.toDataURL();
+                  downloadLink.download = 'compiled_skin.png';
+                  downloadLink.click();
+                };
+                clothesImg.src = clothesSrc;
               };
-              clothesImg.src = clothesSrc;
-            };
-            img.src = URL.createObjectURL(selectedFile);
+              img.src = URL.createObjectURL(selectedFile);
+            }
           }          
 
         document.getElementById('inputImage').addEventListener('change', displaySelectedFile);
 
 
-        document.getElementById('inputImage').addEventListener('change', function(event) {
-            var file = event.target.files[0];
-            var reader = new FileReader();
-            reader.onload = function(event) {
-                var img = new Image();
-                img.src = event.target.result;
-                // You can now use the img variable to access the user imported image
-            };
-            reader.readAsDataURL(file);
-        });  
+        document.addEventListener('DOMContentLoaded', function() {
+            var nogiGoImages = document.querySelectorAll('#nogi-go');
+          
+            nogiGoImages.forEach(function(image) {
+              image.addEventListener('click', function() {
+                var nogiElement = document.getElementById('nogi');
+                nogiElement.innerHTML = '<img class="nogi" src="' + this.src + '">';
+              });
+            });
+          });          
 
 
         //Переключение между категориями
@@ -180,9 +220,6 @@
                 nogiElement.classList.remove('selected');
             });
         });
-
-
-              
     </script>
 </body>
 </html>
