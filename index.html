@@ -176,11 +176,26 @@ verhGoElements.forEach(function (element) {
           var skinImage = new Image();
           skinImage.onload = function () {
             ctx.drawImage(skinImage, 0, 0, img.width, img.height);
+            var nogiGoImage = document.getElementById('nogi-go');
   
-            var downloadLink = document.createElement('a');
-            downloadLink.href = canvas.toDataURL();
-            downloadLink.download = 'compiled_skin.png';
-            downloadLink.click();
+            if (nogiGoImage) {
+              var nogiImg = new Image();
+              nogiImg.onload = function () {
+                ctx.drawImage(nogiImg, 0, 0, img.width, img.height);
+  
+                var downloadLink = document.createElement('a');
+                downloadLink.href = canvas.toDataURL();
+                downloadLink.download = 'compiled_skin.png';
+                downloadLink.click();
+              };
+              var nogiSrc = nogiGoImage.src.replace('models', 'skins');
+              nogiImg.src = nogiSrc;
+            } else {
+              var downloadLink = document.createElement('a');
+              downloadLink.href = canvas.toDataURL();
+              downloadLink.download = 'compiled_skin.png';
+              downloadLink.click();
+            }
           };
           skinImage.src = clothesSrc;
         } else {
@@ -193,11 +208,26 @@ verhGoElements.forEach(function (element) {
             var skinImg = new Image();
             skinImg.onload = function () {
               ctx.drawImage(skinImg, 0, 0, img.width, img.height);
+              var nogiGoImage = document.getElementById('nogi-go');
   
-              var downloadLink = document.createElement('a');
-              downloadLink.href = canvas.toDataURL();
-              downloadLink.download = 'compiled_skin.png';
-              downloadLink.click();
+              if (nogiGoImage) {
+                var nogiImg = new Image();
+                nogiImg.onload = function () {
+                  ctx.drawImage(nogiImg, 0, 0, img.width, img.height);
+  
+                  var downloadLink = document.createElement('a');
+                  downloadLink.href = canvas.toDataURL();
+                  downloadLink.download = 'compiled_skin.png';
+                  downloadLink.click();
+                };
+                var nogiSrc = nogiGoImage.src.replace('models', 'skins');
+                nogiImg.src = nogiSrc;
+              } else {
+                var downloadLink = document.createElement('a');
+                downloadLink.href = canvas.toDataURL();
+                downloadLink.download = 'compiled_skin.png';
+                downloadLink.click();
+              }
             };
             skinImg.src = skinSrc;
           };
@@ -206,7 +236,7 @@ verhGoElements.forEach(function (element) {
       };
       img.src = URL.createObjectURL(selectedFile);
     }
-  }        
+  }  
 
         document.getElementById('inputImage').addEventListener('change', displaySelectedFile);
 
