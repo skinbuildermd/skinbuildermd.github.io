@@ -53,4 +53,3 @@ function compileSkin() {
   
     img.src = URL.createObjectURL(selectedFile);
   }
-  
