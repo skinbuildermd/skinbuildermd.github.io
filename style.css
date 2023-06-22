@@ -3,13 +3,14 @@
 }
 :root {
     --ui-color: #272727;
+    --br: .7rem;
 }
 html {
     background-color: #111111;
     
 }
 .-br {
-    border-radius: 1rem;
+    border-radius: .7rem;
 }
 .headline {
     height: 35px;
@@ -125,7 +126,6 @@ html {
     margin-left: .7rem;
     margin-top: .5rem;
     margin-bottom: .7em;
-    border-radius: 1rem;
 }
 .w img {
     width: 95px;
@@ -146,7 +146,6 @@ html {
     height: 90px;
     background-color: #101110;
     margin-left: 0.9rem;
-    border-radius: 1rem;
     box-sizing: border-box;
     transition: transform 0.3s ease;
 }
@@ -182,15 +181,15 @@ html {
     align-items: center;
     flex-wrap: wrap;
     background-color:  var(--ui-color);
-    width: 120px;
+    width: 110px;
     margin-right: 2rem;
 }
 .installed {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     background-color: #101110;
     margin: .65rem;
-    border-radius: 1rem;
+    border-radius: var(--br);
 }
 .pre-skin {
     display: flex;
@@ -223,10 +222,13 @@ html {
     border: #ffffffe1 2px outset;
 }
 .installed img{
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
 }
 .installed img:hover {
+    transform: scale(1.1);
+}
+.installed:hover {
     transform: scale(1.1);
 }
 .n {
