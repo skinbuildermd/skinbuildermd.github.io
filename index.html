@@ -59,215 +59,194 @@
                         </div>
                         <div class="w">
                             <img id="verh-go" src="./img/models/verh/verh_3.png" alt="">
-                        </div>                        
+                        </div>
                     </div>
             </div>
         </div>
     </div>
     <script>
-        function displaySelectedFile(event) {
-            var file = event.target.files[0];
-            var reader = new FileReader();
+      function displaySelectedFile(event) {
+        var file = event.target.files[0];
+        var reader = new FileReader();
 
-            reader.onload = function(event) {
-                var image = document.getElementById("skin-sel");
-                image.setAttribute('src', event.target.result);
-            };
+        reader.onload = function(event) {
+            var image = document.getElementById("skin-sel");
+            image.setAttribute('src', event.target.result);
+        };
 
-            reader.readAsDataURL(file);
+        reader.readAsDataURL(file);
+    }
+    
+    
+    function changeClothes(clothesType) {
+      var images = document.querySelectorAll('.w img');
+      var selectedNogi = document.querySelector('.nogi.selected');
+      var nogiElement = document.getElementById('nogi');
+      var wElements = document.querySelectorAll('.w');
+    
+      if (clothesType === 'nogi') {
+        images.forEach(function (image) {
+          var src = image.getAttribute('src');
+          var newSrc = src.replace('/verh/', '/nogi/').replace('verh_', 'nogi_');
+          image.src = newSrc;
+          image.id = 'nogi-go';
+        });
+    
+        if (selectedNogi) {
+          if (selectedNogi.classList.contains('selected')) {
+            selectedNogi.innerHTML = '<img class="nogi" src="' + wElements[0].querySelector('img').getAttribute('src') + '">';
+          }
         }
-        
-        
-        function changeClothes(clothesType) {
-            var images = document.querySelectorAll('.w img');
-            var selectedNogi = document.querySelector('.nogi.selected');
-            var nogiElement = document.getElementById('nogi');
-            var wElements = document.querySelectorAll('.w');
-          
-            if (clothesType === 'nogi') {
-              images.forEach(function (image) {
-                var src = image.getAttribute('src');
-                var newSrc = src.replace('/verh/', '/nogi/').replace('verh_', 'nogi_');
-                image.src = newSrc;
-                image.id = 'nogi-go';
-              });
-          
-              if (selectedNogi) {
-                if (selectedNogi.classList.contains('selected')) {
-                  selectedNogi.innerHTML = '<img class="nogi" src="' + wElements[0].querySelector('img').getAttribute('src') + '">';
-                }
-              }
-          
-              wElements.forEach(function (wElement) {
-                var image = wElement.querySelector('img');
-                if (image && image.getAttribute('id') === 'verh-go') {
-                  image.removeAttribute('id');
-                }
-              });
-            } else if (clothesType === 'verh') {
-              images.forEach(function (image) {
-                var src = image.getAttribute('src');
-                var newSrc = src.replace('/nogi/', '/verh/').replace('nogi_', 'verh_');
-                image.src = newSrc;
-                image.removeAttribute('id');
-              });
-          
-              wElements.forEach(function (wElement) {
-                var image = wElement.querySelector('img');
-                if (image && image.getAttribute('id') !== 'verh-go') {
-                  image.id = 'verh-go';
-                }
-              });
-            }
-          }                                     
-        
-        var verhGoElements = document.querySelectorAll(".w img[id^='verh-go']");
+    
+        wElements.forEach(function (wElement) {
+          var image = wElement.querySelector('img');
+          if (image && image.getAttribute('id') === 'verh-go') {
+            image.removeAttribute('id');
+          }
+        });
+      } else if (clothesType === 'verh') {
+        images.forEach(function (image) {
+          var src = image.getAttribute('src');
+          var newSrc = src.replace('/nogi/', '/verh/').replace('nogi_', 'verh_');
+          image.src = newSrc;
+          image.removeAttribute('id');
+        });
+    
+        wElements.forEach(function (wElement) {
+          var image = wElement.querySelector('img');
+          if (image && image.getAttribute('id') !== 'verh-go') {
+            image.id = 'verh-go';
+          }
+        });
+      }
+    }
+    
+    var verhGoElements = document.querySelectorAll(".w img[id^='verh-go']");
 
 // Получаем все элементы с классом "verh-go"
 var verhGoElements = document.querySelectorAll("[id^='verh-go']");
 
 // Добавляем обработчик событий к каждому элементу
 verhGoElements.forEach(function (element) {
-    element.addEventListener("click", function () {
-      var imageUrl = this.src;
-      var image = document.createElement("img");
-      image.src = imageUrl;
-      image.alt = "Image";
-  
-      if (this.id === "nogi-go") {
-        var divNogi = document.getElementById("nogi");
-        divNogi.innerHTML = ""; // Очищаем содержимое блока "nogi"
-        divNogi.appendChild(image);
-      } else {
-        var divInstalled = document.createElement("div");
-        divInstalled.classList.add("installed");
-        divInstalled.id = "verh";
-        divInstalled.innerHTML = '<img id="verh-skin" src="' + imageUrl + '">';
-  
-        var existingDivVerh = document.getElementById("verh");
-        existingDivVerh.parentNode.replaceChild(divInstalled, existingDivVerh);
-      }
-    });
-  });
+element.addEventListener("click", function () {
+  var imageUrl = this.src;
+  var image = document.createElement("img");
+  image.src = imageUrl;
+  image.alt = "Image";
 
-  function compileSkin() {
-    var selectedFile = document.getElementById('inputImage').files[0];
-    var clothesElement = document.getElementById('verh');
-    var clothesImage = clothesElement.querySelector('img');
-    var clothesSrc = clothesImage.getAttribute('src');
-  
-    if (clothesElement.id !== 'nogi') {
-      // Продолжить только если выбран верхний элемент (не штаны)
-      var canvas = document.createElement('canvas');
-      var ctx = canvas.getContext('2d');
-      var img = new Image();
-  
-      img.onload = function () {
-        canvas.width = img.width;
-        canvas.height = img.height;
-        ctx.drawImage(img, 0, 0);
-  
-        var installedImage = document.querySelector('#verh.installed img');
-        if (installedImage) {
-          var imageSrc = installedImage.src.replace('models', 'skins');
-          var fileName = imageSrc.split('/').pop();
-          clothesSrc = './img/skins/verh/' + fileName;
-  
-          var skinImage = new Image();
-          skinImage.onload = function () {
-            ctx.drawImage(skinImage, 0, 0, img.width, img.height);
-            var nogiGoImage = document.getElementById('nogi-go');
-  
-            if (nogiGoImage) {
-              var nogiImg = new Image();
-              nogiImg.onload = function () {
-                ctx.drawImage(nogiImg, 0, 0, img.width, img.height);
-  
-                var downloadLink = document.createElement('a');
-                downloadLink.href = canvas.toDataURL();
-                downloadLink.download = 'compiled_skin.png';
-                downloadLink.click();
-              };
-              var nogiSrc = nogiGoImage.src.replace('models', 'skins');
-              nogiImg.src = nogiSrc;
-            } else {
-              var downloadLink = document.createElement('a');
-              downloadLink.href = canvas.toDataURL();
-              downloadLink.download = 'compiled_skin.png';
-              downloadLink.click();
-            }
+  if (this.id === "nogi-go") {
+    var divNogi = document.getElementById("nogi");
+    divNogi.innerHTML = ""; // Очищаем содержимое блока "nogi"
+    divNogi.appendChild(image);
+  } else {
+    var divInstalled = document.createElement("div");
+    divInstalled.classList.add("installed");
+    divInstalled.id = "verh";
+    divInstalled.innerHTML = '<img id="verh-skin" src="' + imageUrl + '">';
+
+    var existingDivVerh = document.getElementById("verh");
+    existingDivVerh.parentNode.replaceChild(divInstalled, existingDivVerh);
+  }
+});
+});
+
+function compileSkin() {
+  var selectedFile = document.getElementById('inputImage').files[0];
+  var clothesElement = document.getElementById('verh');
+  var clothesImage = clothesElement.querySelector('img');
+  var clothesSrc = clothesImage.getAttribute('src');
+  var nogiElement = document.getElementById('nogi');
+  var nogiImage = nogiElement.querySelector('img');
+  var nogiSrc = nogiImage.getAttribute('src');
+
+  var canvas = document.createElement('canvas');
+  var ctx = canvas.getContext('2d');
+  var img = new Image();
+
+  img.onload = function () {
+    canvas.width = img.width;
+    canvas.height = img.height;
+    ctx.drawImage(img, 0, 0);
+
+    var installedImage = document.querySelector('#verh.installed img');
+    if (installedImage) {
+      var imageSrc = installedImage.src.replace('models', 'skins');
+      var fileName = imageSrc.split('/').pop();
+      clothesSrc = './img/skins/verh/' + fileName;
+    } else {
+      clothesSrc = clothesSrc.replace('models', 'skins');
+    }
+
+    var clothesImg = new Image();
+    clothesImg.onload = function () {
+      ctx.drawImage(clothesImg, 0, 0, img.width, img.height);
+
+      var skinImage = document.getElementById('skin-sel');
+      var skinSrc = skinImage.getAttribute('src');
+      var skinImg = new Image();
+      skinImg.onload = function () {
+        ctx.drawImage(skinImg, 0, 0, img.width, img.height);
+
+        if (nogiImage) {
+          var nogiImg = new Image();
+          nogiImg.onload = function () {
+            ctx.drawImage(nogiImg, 0, 0, img.width, img.height);
+
+            var downloadLink = document.createElement('a');
+            downloadLink.href = canvas.toDataURL();
+            downloadLink.download = 'compiled_skin.png';
+            downloadLink.click();
           };
-          skinImage.src = clothesSrc;
+          nogiImg.src = nogiSrc.replace('models', 'skins');
         } else {
-          var clothesImg = new Image();
-          clothesImg.onload = function () {
-            ctx.drawImage(clothesImg, 0, 0, img.width, img.height);
-  
-            var skinImage = document.getElementById('skin-sel');
-            var skinSrc = skinImage.getAttribute('src');
-            var skinImg = new Image();
-            skinImg.onload = function () {
-              ctx.drawImage(skinImg, 0, 0, img.width, img.height);
-              var nogiGoImage = document.getElementById('nogi-go');
-  
-              if (nogiGoImage) {
-                var nogiImg = new Image();
-                nogiImg.onload = function () {
-                  ctx.drawImage(nogiImg, 0, 0, img.width, img.height);
-  
-                  var downloadLink = document.createElement('a');
-                  downloadLink.href = canvas.toDataURL();
-                  downloadLink.download = 'compiled_skin.png';
-                  downloadLink.click();
-                };
-                var nogiSrc = nogiGoImage.src.replace('models', 'skins');
-                nogiImg.src = nogiSrc;
-              } else {
-                var downloadLink = document.createElement('a');
-                downloadLink.href = canvas.toDataURL();
-                downloadLink.download = 'compiled_skin.png';
-                downloadLink.click();
-              }
-            };
-            skinImg.src = skinSrc;
-          };
-          clothesImg.src = clothesSrc;
+          var downloadLink = document.createElement('a');
+          downloadLink.href = canvas.toDataURL();
+          downloadLink.download = 'compiled_skin.png';
+          downloadLink.click();
         }
       };
-      img.src = URL.createObjectURL(selectedFile);
-    }
-  }  
+      skinImg.src = skinSrc;
+    };
+    clothesImg.src = clothesSrc;
+  };
+  img.src = URL.createObjectURL(selectedFile);
+}
 
-        document.getElementById('inputImage').addEventListener('change', displaySelectedFile);
+    var clothesImg = new Image();
+    clothesImg.onload = function () {
+      ctx.drawImage(clothesImg, 0, 0, img.width, img.height);
+
+      var skinImage = document.getElementById('skin-sel');
+      var skinSrc = skinImage.getAttribute('src');
+      var skinImg = new Image();
+      skinImg.onload = function () {
+        ctx.drawImage(skinImg, 0, 0, img.width, img.height);
+
+        if (nogiImage) {
+          var nogiImg = new Image();
+          nogiImg.onload = function () {
+            ctx.drawImage(nogiImg, 0, 0, img.width, img.height);
+
+            var downloadLink = document.createElement('a');
+            downloadLink.href = canvas.toDataURL();
+            downloadLink.download = 'compiled_skin.png';
+            downloadLink.click();
+          };
+          nogiImg.src = nogiSrc;
+        } else {
+          var downloadLink = document.createElement('a');
+          downloadLink.href = canvas.toDataURL();
+          downloadLink.download = 'compiled_skin.png';
+          downloadLink.click();
+        }
+      };
+      skinImg.src = skinSrc;
+    };
+    clothesImg.src = clothesSrc;
+  img.src = URL.createObjectURL(selectedFile);
 
 
-        document.addEventListener('DOMContentLoaded', function() {
-            var nogiGoImages = document.querySelectorAll('#nogi-go');
-          
-            nogiGoImages.forEach(function(image) {
-              image.addEventListener('click', function() {
-                var nogiElement = document.getElementById('nogi');
-                nogiElement.innerHTML = '<img class="nogi" src="' + this.src + '">';
-              });
-            });
-          });          
-
-
-        //Переключение между категориями
-        document.addEventListener('DOMContentLoaded', function() {
-            var nogiElement = document.querySelector('.nogi');
-            var verhElement = document.querySelector('.verh');
-        
-            nogiElement.addEventListener('click', function() {
-                nogiElement.classList.add('selected');
-                verhElement.classList.remove('selected');
-            });
-        
-            verhElement.addEventListener('click', function() {
-                verhElement.classList.add('selected');
-                nogiElement.classList.remove('selected');
-            });
-        });
-    </script>
+document.getElementById('inputImage').addEventListener('change', displaySelectedFile);
+</script>
 </body>
 </html>

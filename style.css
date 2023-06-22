@@ -1,8 +1,11 @@
 * {
     color: white;
 }
+:root {
+    --ui-color: #272727;
+}
 html {
-    background-color: #161816;
+    background-color: #111111;
     
 }
 .-br {
@@ -14,7 +17,7 @@ html {
     padding-right: 3rem;
     padding-top: .5rem;
     padding-bottom: .5rem;
-    background-color: #101110;
+    background-color: #141414;
 }
 .logo img {
     width: 100px;
@@ -35,7 +38,7 @@ html {
     height: 858px;
 }
 .skin {
-    background-color: #2c2e2c;
+    background-color: var(--ui-color);
     width: 350px;
     height: 550px;
     top: 165px;
@@ -69,105 +72,13 @@ html {
     opacity: 0;
     cursor: pointer;
 }
-.size {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #101110;
-    height: 40px;
-    width: 318px;
-    top: 41.2rem;
-    left: 41rem;
-}
-.btn-arm{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f4f8f4;
-    height: 70%;
-    width: 45%;
-    margin-right: 1.2rem;
-    cursor: pointer;
-}
-.btn-arm p {
-    color: #000000;
-    margin-top: -.1rem;
-}
-.no-col {
-    margin: 0;
-}
-.btn-arm-select {
-    background-color: #838383;
-    border: #5a5c5a 2px solid;
-}
-.btn-arm-select p {
-    color: #ffffff;
-}
-.comp {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f4f8f4;
-    height: 40px;
-    width: 150px;
-    margin-right: 1.2rem;
-    cursor: pointer;
-    top: 47rem;
-    left: 46rem;
-    padding-left: .5rem;
-    padding-right: .5rem;
-}
-.comp p {
-    color: black;
-}
-.body-part {
-    display: flex;
-    background-color: #2c2e2c;
-    width: 515px;
-    height: 80px;
-    top: 10.3rem;
-    left: 65rem;
-}
-.body-part img {
-    height: 82px;
-}
-.skins {
-    background-color: #2c2e2c;
-    height: 428px;
-    width: 515px;
-    top: 18rem;
-    left: 65rem;
-    overflow-x: scroll;
-}
-.b6 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start; /* Изменено значение */
-    width: fit-content;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0 1rem;
-    margin-left: 1rem;
-}
-.b5 {
-    width: 100px;
-    height: 100px;
-    background-color: #101110;
-    margin-right: 1rem;
-    margin-top: 1.5rem;
-}
-.-etwo{
-    width: 82px;
-}
 .pix-skin {
     display: flex;
     justify-content: center;
+    align-items: end;
     margin: 4rem;
     margin-top: 5.25rem;
+    height: 150px;
 }
 .pix-skin img {
     width: 100px;
@@ -185,13 +96,13 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #2c2e2c;
+    background-color: var(--ui-color);
     width: 466px;
     height: 120px;
 }
 .all-cloat {
     margin-top: 2rem;
-    background-color: #2c2e2c;
+    background-color:  var(--ui-color);
     width: 435px;
     height: 399px;
     padding: 1rem;
@@ -248,20 +159,20 @@ html {
 }
 
 .c.selected {
-    transform: scale(1.1); /* Увеличение размера блока */
-    z-index: 1; /* Добавление z-index для перекрытия остальных блоков */
+    transform: scale(1.1);
+    z-index: 1;
 }
 
 .c.selected img {
-    transform: scale(1.1); /* Увеличение размера картинки */
+    transform: scale(1.1);
 }
 
 .c:not(.selected) {
-    transform: scale(0.9); /* Уменьшение размера остальных блоков */
+    transform: scale(0.9);
 }
 
 .c:not(.selected) img {
-    transform: scale(0.9); /* Уменьшение размера картинок остальных блоков */
+    transform: scale(0.9);
 }
 .hj {
     margin: 0;
@@ -270,7 +181,7 @@ html {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #2c2e2c;
+    background-color:  var(--ui-color);
     width: 120px;
     margin-right: 2rem;
 }
@@ -289,7 +200,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: end;
-    height: 280px;
+    height: 233px;
 }
 .skompil-btn {
     user-select: none;
