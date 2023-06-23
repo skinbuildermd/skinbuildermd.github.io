@@ -3,14 +3,11 @@
 }
 :root {
     --ui-color: #272727;
-    --br: .7rem;
+    --br: 1rem;
 }
 html {
     background-color: #111111;
     
-}
-.-br {
-    border-radius: .7rem;
 }
 .headline {
     height: 35px;
