@@ -15,7 +15,7 @@ html {
     padding-left: 3rem;
     padding-right: 3rem;
     background-color: #141414;
-    justify-content: space-between; /* Добавлено свойство для выравнивания по горизонтали */
+    justify-content: space-between;
 }
 
 .logo1 img {
@@ -41,7 +41,7 @@ html {
 
 .steve-alex {
     display: flex;
-    justify-content: flex-end; /* Добавлено свойство для выравнивания блока в правом краю */
+    justify-content: flex-end;
     align-items: center;
 }
 
