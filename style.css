@@ -283,3 +283,39 @@ html {
 #skin-sel {
     background-size: cover;
 }
+
+
+
+
+#cookie-notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272727;
+    padding: .7rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 98.8%;
+    border-radius: 2rem 2rem 0 0;
+}
+
+#cookie-notification p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+#close-cookie-notification {
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 1rem;
+    border-radius: .7rem;
+    padding: .5rem .7rem .5rem .7rem;
+}
