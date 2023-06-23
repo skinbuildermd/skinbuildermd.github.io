@@ -10,24 +10,45 @@ html {
     
 }
 .headline {
-    height: 35px;
+    display: flex;
+    height: 55px;
     padding-left: 3rem;
     padding-right: 3rem;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
     background-color: #141414;
+    justify-content: space-between; /* Добавлено свойство для выравнивания по горизонтали */
 }
-.logo img {
-    width: 120px;
-}
-.logo a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.logo1 img {
+    width: 200px;
     height: 100%;
 }
+
+.logo1 {
+    width: 200px;
+    height: 100%;
+}
+
+.logo1 a {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+}
+
 #logo-site:hover {
     fill: #e0751c;
+}
+
+.steve-alex {
+    display: flex;
+    justify-content: flex-end; /* Добавлено свойство для выравнивания блока в правом краю */
+    align-items: center;
+}
+
+.steve-alex img {
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
 }
 .main {
     display: flex;
@@ -261,28 +282,4 @@ html {
 }
 #skin-sel {
     background-size: cover;
-}
-.del-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    width: 110px;
-    margin-bottom: .7rem;
-}
-#del-img {
-    user-select: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    height: 20px;
-    padding: .5rem;
-    position: relative;
-    overflow: hidden;
-    color: black;
-}
-#delete-img img {
-    width: 50px;
 }
