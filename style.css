@@ -182,6 +182,7 @@ html {
     margin-right: 2rem;
 }
 .installed {
+    display: inline-block;
     width: 90px;
     height: 90px;
     background-color: #101110;
@@ -221,6 +222,7 @@ html {
 .installed img{
     width: 90px;
     height: 90px;
+    cursor: pointer;
 }
 .installed img:hover {
     transform: scale(1.1);
@@ -259,4 +261,28 @@ html {
 }
 #skin-sel {
     background-size: cover;
+}
+.del-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 110px;
+    margin-bottom: .7rem;
+}
+#del-img {
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    height: 20px;
+    padding: .5rem;
+    position: relative;
+    overflow: hidden;
+    color: black;
+}
+#delete-img img {
+    width: 50px;
 }
