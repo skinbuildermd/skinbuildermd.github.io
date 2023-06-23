@@ -48,7 +48,7 @@ html {
 .steve-alex img {
     width: 30px;
     height: 30px;
-    margin-right: 1rem;
+    margin-right: .7rem;
 }
 .main {
     display: flex;
@@ -293,7 +293,6 @@ html {
     bottom: 0;
     left: 0;
     width: 98.8%;
-    border-radius: 2rem 2rem 0 0;
 }
 #cookie-notification p {
     margin: 0;

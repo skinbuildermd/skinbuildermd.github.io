@@ -52,7 +52,7 @@
             </div>
             <div class="at">
                 <div class="clothes -br1">
-                    <div class="-br1 c hj"></div>
+                    <div class="-br1 c hj"><!--<img class="golova" src="./img/models/golova/golova_1.png">--></div>
                     <div class="-br1 c verh selected" onclick="changeClothes('verh')"><img class="verh" src="./img/models/var/verh_1.png"></div>
                     <div class="-br1 c nogi" id="nogi-add" onclick="changeClothes('nogi')"><img src="./img/models/nogi/nogi_1.png"></div>
                     <div class="-br1 c obuv" onclick="changeClothes('obuv')"></div>
@@ -77,41 +77,6 @@
         <button id="close-cookie-notification" onclick="hideCookieNotification()">Закрыть</button>
     </div>
     <script src="./js/shoto.js"></script>
-    <script>
-        function hideCookieNotification() {
-            document.getElementById("cookie-notification").style.display = "none";
-            setCookie("cookieNotificationClosed", true, 365);
-        }
-    
-        function setCookie(name, value, days) {
-            var expires = "";
-            if (days) {
-                var date = new Date();
-                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                expires = "; expires=" + date.toUTCString();
-            }
-            document.cookie = name + "=" + (value || "") + expires + "; path=/";
-        }
-    
-        function getCookie(name) {
-            var nameEQ = name + "=";
-            var ca = document.cookie.split(";");
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) === " ") {
-                    c = c.substring(1, c.length);
-                }
-                if (c.indexOf(nameEQ) === 0) {
-                    return c.substring(nameEQ.length, c.length);
-                }
-            }
-            return null;
-        }
-    
-        var cookieNotificationClosed = getCookie("cookieNotificationClosed");
-        if (cookieNotificationClosed) {
-            document.getElementById("cookie-notification").style.display = "none";
-        }
-    </script>
+    <script src="./js/cookie.js"></script>
 </body>
 </html>
