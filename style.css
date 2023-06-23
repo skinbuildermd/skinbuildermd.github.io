@@ -225,9 +225,6 @@ html {
 .installed img:hover {
     transform: scale(1.1);
 }
-.installed:hover {
-    transform: scale(1.1);
-}
 .n {
     width: 95px;
     height: 95px;
