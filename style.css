@@ -4,6 +4,7 @@
 :root {
     --ui-color: #272727;
     --br: 1rem;
+    --bar-col: #141414;
 }
 html {
     background-color: #111111;
@@ -41,14 +42,20 @@ html {
 
 .steve-alex {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
 .steve-alex img {
     width: 30px;
     height: 30px;
-    margin-right: .7rem;
+    margin-left: .7rem;
+}
+.btns-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .main {
     display: flex;
@@ -287,7 +294,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #272727;
+    background-color: var(--bar-col);
     padding: .7rem;
     position: fixed;
     bottom: 0;
@@ -312,3 +319,27 @@ html {
     border-radius: .7rem;
     padding: .5rem .7rem .5rem .7rem;
 }
+.clear-filters {
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 1rem;
+    border-radius: .7rem;
+    padding: .5rem .7rem .5rem .7rem;
+}
+.clear-filters p{
+    color: black;
+}
+/* .tooltip {
+    background-color: var(--ui-color);
+    padding: .7rem;
+    border-radius: var(--br);
+    margin-top: 1.5rem;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+} */
