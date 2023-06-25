@@ -120,17 +120,16 @@
         font-size: 0;
       }
       .ll {
-        height: 294px;
+        height: 419px;
         display: flex;
         align-items: center;
-        justify-content: center;
         user-select: none;
-        width: 500px;
-        margin-top: 38.8rem;
+        margin-top: 38.85rem;
+        width: 25rem;
       }
       .ll p {
         display: flex;
-        justify-content: center;
+        justify-content: right;
         align-items: center;
         font-size: 1.5rem;
         width: 350px;
