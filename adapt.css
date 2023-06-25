@@ -87,6 +87,7 @@
         justify-content: center;
         align-items: center;
         height: 10px;
+        padding: 0;
       }
       #cookie-notification {
         display: flex;
@@ -119,13 +120,18 @@
         font-size: 0;
       }
       .ll {
-        height: 740px;
+        height: 294px;
         display: flex;
         align-items: center;
+        justify-content: center;
         user-select: none;
-        
+        width: 500px;
+        margin-top: 38.8rem;
       }
       .ll p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 1.5rem;
         width: 350px;
       }
