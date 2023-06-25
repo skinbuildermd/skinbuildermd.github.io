@@ -129,7 +129,7 @@ html {
 .all-cloat {
     margin-top: 2rem;
     background-color:  var(--ui-color);
-    width: 435px;
+    max-width: 435px;
     height: 399px;
     padding: 1rem;
     padding-bottom: 0;
@@ -349,4 +349,7 @@ html {
 }
 #alex {
     cursor: pointer;
+}
+.ll p {
+    font-size: 0;
 }
