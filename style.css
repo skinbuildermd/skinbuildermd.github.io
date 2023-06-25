@@ -292,6 +292,7 @@ html {
 }
 #skin-sel {
     background-size: cover;
+    pointer-events: none;
 }
 #cookie-notification {
     display: flex;
