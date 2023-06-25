@@ -127,6 +127,9 @@ html {
     height: 120px;
 }
 .all-cloat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 2rem;
     background-color:  var(--ui-color);
     max-width: 435px;
@@ -142,7 +145,7 @@ html {
     width: fit-content;
     height: 100%;
     margin: 0 auto;
-    margin-left: -.5rem;
+    margin-left: -.1rem;
 }
 .w {
     width: 95px;
@@ -160,7 +163,7 @@ html {
 .w:hover {
     transform: scale(1.1);
     z-index: 1;
-    border: #ffffffe1 2px outset;
+    border: #ffffffe1 2px solid;
 }
 
 .w:hover img {
