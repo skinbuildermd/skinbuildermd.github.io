@@ -339,15 +339,6 @@ html {
 .clear-filters p{
     color: black;
 }
-/* .tooltip {
-    background-color: var(--ui-color);
-    padding: .7rem;
-    border-radius: var(--br);
-    margin-top: 1.5rem;
-    transition: opacity 0.3s ease-in-out;
-    opacity: 1;
-} */
-
 #steve {
     cursor: pointer;
 }
