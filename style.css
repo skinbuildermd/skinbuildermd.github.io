@@ -127,9 +127,9 @@ html {
     height: 120px;
 }
 .all-cloat {
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
     margin-top: 2rem;
     background-color:  var(--ui-color);
     max-width: 435px;
