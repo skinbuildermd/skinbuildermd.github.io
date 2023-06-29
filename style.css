@@ -324,6 +324,7 @@ html {
     padding: .5rem .7rem .5rem .7rem;
 }
 .clear-filters {
+    user-select: none;
     background-color: #ffffff;
     border: none;
     color: #000000;
@@ -340,11 +341,19 @@ html {
     color: black;
 }
 #steve {
+    user-select: none;
     cursor: pointer;
 }
 #alex {
+    user-select: none;
     cursor: pointer;
 }
 .ll p {
     font-size: 0;
+}
+#labelText {
+    cursor: pointer;
+}
+#inputImage {
+    cursor: pointer;
 }
