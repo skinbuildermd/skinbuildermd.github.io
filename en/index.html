@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adapt.css">
+    <link rel="stylesheet" href="https://baguettecss.github.io/v2/v2.css">
+    <link rel="shortcut icon" href="https://skinbuildermd.github.io/img/logo/skinbuilder-logo-mini.svg" type="image/x-icon">
+
+    <script src="./js/compile-skin.js"></script>
+    <script src="./js/change-clothes.js"></script>
+    <script src="./js/selected-file.js"></script>
+    <script src="./js/filter.js"></script>
+
+    <title>SkinBuilder</title>
+</head>
+<body>
+    <div class="headline">
+        <div class="logo1">
+            <a href="./">
+                <img src="./img/logo/skinbuilder-logo-full.svg" alt="лого" title="Просьба пока, что не пользвоваться сайтом так как функции могут глючить и не работать.">
+            </a>
+        </div>
+        <div class="steve-alex" id="steveAlexPanel">
+            <div class="btns-filter">
+                <div data-f="all" class="clear-filters -br1">
+                    <p>Очистить фильтр</p>
+                  </div>
+                  <img data-f="steve" id="steve" title="Толстые руки у скина" src="./img/icons/steve.png" alt="">
+                  <img data-f="alex" id="alex" title="Тонкие руки у скина" src="./img/icons/alex.png" alt="">
+            </div>
+          </div>                 
+    </div>
+    <div class="main">
+        <div class="ll">
+            <p>Использовать лучше на ПК.</p>
+        </div>
+        <div class="in">
+            <div class="pre-skin">
+                <div class="adds-skins -br1">
+                    <div id="golova" class="installed"></div>
+                    <div id="verh" class="installed"></div>                    
+                    <div id="nogi" class="installed"></div>
+                    <div id="obuv" class="installed"></div>
+                </div>
+            </div>
+            <div class="skin -br1">
+                <div class="pix-skin">
+                    <img id="skin-sel" src="img/air.png" alt="">
+                </div>
+                <div class="skompil">
+                    <label class="change-btn -br1" for="inputImage">
+                        <span id="labelText" title="Выберите файл...">Выберите файл</span>
+                        <input type="file" id="inputImage" accept="image/*">
+                    </label>
+                    <div style="margin-left: 1rem;" class="skompil-btn -br1" title="Скомпилировать Ваш скин">
+                        <p id="compileButton" title="Скомпилировать Ваш скин" onclick="compileSkin()">Скомпилировать</p>
+                    </div>
+                </div>
+            </div>
+            <div class="at">
+                <div class="clothes -br1">
+                    <div class="-br1 c hj"></div>
+                    <div class="-br1 c verh selected" onclick="changeClothes('verh')"><img class="verh" src="./img/models/var/verh_1.png"></div>
+                    <div class="-br1 c nogi" id="nogi-add" onclick="changeClothes('nogi')"><img src="./img/models/nogi/nogi_1.png"></div>
+                    <div class="-br1 c obuv" onclick="changeClothes('obuv')"></div>
+                </div>
+                <div class="all-cloat -br1">
+                    <div class="all-cloat-scroll">
+                        <div class="w -br1" data-skin="alex">
+                            <img id="verh-go" src="./img/models/verh/verh_1.png" alt="">
+                        </div>
+                        <div class="w -br1" data-skin="alex">
+                            <img id="verh-go" src="./img/models/verh/verh_2.png" alt="">
+                        </div>
+                        <div class="w -br1" data-skin="steve">
+                            <img id="verh-go" src="./img/models/verh/verh_3.png" alt="">
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div id="cookie-notification">
+        <p>Для корректного нанесения скина, загружайте его без одежды. Если вы не будете соблюдать это правило, вам придется удалять лишние пиксели с вашего скина.</p>
+        <button id="close-cookie-notification" onclick="hideCookieNotification()">Закрыть</button>
+    </div>
+    <script src="./js/shoto.js"></script>
+    <script src="./js/cookie.js"></script>
+    <script>
+        console.log("⚠️ Нашли ошибку? Помоги исправить её на GitHub! https://github.com/skinbuildermd/skinbuildermd.github.io");
+    </script>
+</body>
+</html>

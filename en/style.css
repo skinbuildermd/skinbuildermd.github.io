@@ -1,0 +1,349 @@
+* {
+    color: white;
+}
+:root {
+    --ui-color: #272727;
+    --br: 1rem;
+    --bar-col: #141414;
+}
+html {
+    background-color: #111111;
+    
+}
+.headline {
+    display: flex;
+    height: 55px;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    background-color: #141414;
+    justify-content: space-between;
+}
+
+.logo1 img {
+    width: 200px;
+    height: 100%;
+}
+
+.logo1 {
+    width: 200px;
+    height: 100%;
+}
+
+.logo1 a {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+}
+
+#logo-site:hover {
+    fill: #e0751c;
+}
+
+.steve-alex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.steve-alex img {
+    width: 30px;
+    height: 30px;
+    margin-left: .7rem;
+}
+.btns-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 858px;
+}
+.skin {
+    background-color: var(--ui-color);
+    width: 350px;
+    height: 550px;
+    top: 165px;
+    left: 40rem;
+    background-size: 111.5%;
+    padding: .5rem;
+}
+.change-btn {
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    height: 40px;
+    width: 120px;
+    padding-right: .7rem;
+    padding-left: .7rem;
+    position: relative;
+    overflow: hidden;
+}
+.change-btn span {
+    color: black;
+}
+.change-btn input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.pix-skin {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin: 4rem;
+    margin-top: 5.25rem;
+    height: 150px;
+}
+.pix-skin img {
+    width: 100px;
+    height: 100px;
+}
+.in {
+    display: flex;
+    justify-content: center;
+}
+.at {
+    margin-left: 2rem;
+    
+}
+.clothes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--ui-color);
+    width: 466px;
+    height: 120px;
+}
+.all-cloat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    background-color:  var(--ui-color);
+    max-width: 435px;
+    height: 399px;
+    padding: 1rem;
+    padding-bottom: 0;
+    overflow-x: auto;
+}
+.all-cloat-scroll {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: fit-content;
+    height: 100%;
+    margin: 0 auto;
+    margin-left: -.1rem;
+}
+.w {
+    width: 95px;
+    height: 95px;
+    background-color: #101110;
+    margin-left: .7rem;
+    margin-top: .5rem;
+    margin-bottom: .7em;
+}
+.w img {
+    width: 95px;
+    height: 95px;
+    cursor: pointer;
+}
+.w:hover {
+    box-sizing: border-box;
+    border: 2px solid #ffffffe1;
+  }
+
+.w:hover img {
+    margin: -2px;
+}
+.c {
+    width: 90px;
+    height: 90px;
+    background-color: #101110;
+    margin-left: 0.9rem;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.c img {
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.c.selected {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.c.selected img {
+    transform: scale(1.1);
+}
+
+.c:not(.selected) {
+    transform: scale(0.9);
+}
+
+.c:not(.selected) img {
+    transform: scale(0.9);
+}
+.hj {
+    margin: 0;
+}
+.adds-skins {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color:  var(--ui-color);
+    width: 110px;
+    margin-right: 2rem;
+}
+.installed {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background-color: #101110;
+    margin: .65rem;
+    border-radius: var(--br);
+}
+.pre-skin {
+    display: flex;
+    align-items: center;
+}
+.skompil {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 233px;
+}
+.skompil-btn {
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    height: 40px;
+    width: 120px;
+    padding-right: .7rem;
+    padding-left: .7rem;
+    position: relative;
+    overflow: hidden;
+}
+.skompil-btn p{
+    color: black;
+}
+.selected {
+    border: #ffffffe1 2px outset;
+}
+.installed img{
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+}
+.installed img:hover {
+    transform: scale(1.1);
+}
+.n {
+    width: 95px;
+    height: 95px;
+    background-color: #101110;
+    margin-left: .7rem;
+    margin-top: .5rem;
+    margin-bottom: .7em;
+    border-radius: 1rem;
+}
+.n img {
+    width: 95px;
+    height: 95px;
+    cursor: pointer;
+}
+.nogi-all-cloat {
+    margin-top: 2rem;
+    background-color: #2c2e2c;
+    width: 435px;
+    height: 399px;
+    padding: 1rem;
+    padding-bottom: 0;
+    overflow-x: auto;
+}
+.nogi-all-cloat-scroll {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: fit-content;
+    height: 100%;
+    margin: 0 auto;
+    margin-left: -.5rem;
+}
+#skin-sel {
+    background-size: cover;
+    pointer-events: none;
+}
+#cookie-notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bar-col);
+    padding: .7rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 98.8%;
+}
+#cookie-notification p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1rem;
+}
+#close-cookie-notification {
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 1rem;
+    border-radius: .7rem;
+    padding: .5rem .7rem .5rem .7rem;
+}
+.clear-filters {
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 1rem;
+    border-radius: .7rem;
+    padding: .5rem .7rem .5rem .7rem;
+}
+.clear-filters p{
+    color: black;
+}
+#steve {
+    cursor: pointer;
+}
+#alex {
+    cursor: pointer;
+}
+.ll p {
+    font-size: 0;
+}

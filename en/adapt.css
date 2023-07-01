@@ -1,0 +1,137 @@
+@media only screen and (max-width: 500px) {
+    .all-cloat {
+        margin-top: 0rem;
+        max-width: 0;
+        height: 0;
+        padding: 0;
+        padding-bottom: 0;
+      }
+      .clothes {
+        width: 0;
+        height: 0;
+      }
+      .c img {
+        width: 0;
+        height: 0;
+      }
+      .pix-skin {
+        width: 0;
+        height: 0;
+      }
+      .pix-skin img {
+        width: 0;
+        height: 0;
+      }
+      .skompil {
+        width: 0;
+        height: 0;
+      }
+      .skin {
+        width: 0;
+        height: 0;
+      }
+      .skompil-btn {
+        width: 0;
+        height: 0;
+      }
+      .in {
+        width: 0;
+        height: 0;
+      }
+      .adds-skins {
+        width: 0;
+        height: 0;
+      }
+      .skin {
+        width: 0;
+        height: 0;
+        padding: 0;
+      }
+      .c {
+        width: 0;
+        height: 0;
+      }
+      .verh {
+        width: 0;
+        height: 0;
+      }
+      .selected {
+        border: 0;
+      }
+      .change-btn {
+        width: 0;
+        height: 0;
+      }
+      .headline {
+        display: flex;
+        height: 55px;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        background-color: #141414;
+        justify-content: space-between;
+      }
+      .clear-filters {
+        width: 0;
+        height: 0;
+        padding: 0;
+      }
+      .clear-filters p {
+        font-size: 0;
+      }
+      .btns-filter img {
+        width: 0;
+        height: 0;
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10px;
+        padding: 0;
+      }
+      #cookie-notification {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--bar-col);
+        padding: .7rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 98.8%;
+      }
+      #close-cookie-notification {
+        margin-left: 0rem;
+        font-size: 0;
+        padding: 0;
+      }
+      #cookie-notification {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: 0;
+        padding: 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 0;
+      }
+      #cookie-notification p {
+        font-size: 0;
+      }
+      .ll {
+        height: 419px;
+        display: flex;
+        align-items: center;
+        user-select: none;
+        margin-top: 38.85rem;
+        width: 25rem;
+      }
+      .ll p {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        font-size: 1.5rem;
+        width: 350px;
+      }
+}
