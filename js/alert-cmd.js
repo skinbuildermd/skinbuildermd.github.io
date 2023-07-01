@@ -1,0 +1,1 @@
+console.log("⚠️ Нашли ошибку? Помоги исправить её на GitHub! https://github.com/skinbuildermd/skinbuildermd.github.io");
