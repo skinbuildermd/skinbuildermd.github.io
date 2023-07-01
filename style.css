@@ -25,6 +25,7 @@ html {
 }
 
 .logo1 {
+    display: flex;
     width: 200px;
     height: 100%;
 }
@@ -35,7 +36,18 @@ html {
     align-content: center;
     height: 100%;
 }
-
+.lang-sel {
+    display: flex;
+}
+.lang-sel a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lang-sel img {
+    height: 25px;
+    width: 25px;
+}
 #logo-site:hover {
     fill: #e0751c;
 }

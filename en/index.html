@@ -20,22 +20,25 @@
     <div class="headline">
         <div class="logo1">
             <a href="./">
-                <img src="./img/logo/skinbuilder-logo-full.svg" alt="лого" title="Просьба пока, что не пользвоваться сайтом так как функции могут глючить и не работать.">
+                <img src="./img/logo/skinbuilder-logo-full.svg" alt="лого">
             </a>
+            <div class="lang-sel">
+                <a href="/"><img src="https://em-content.zobj.net/thumbs/120/twitter/351/flag-russia_1f1f7-1f1fa.png" alt=""></a>
+            </div>  
         </div>
         <div class="steve-alex" id="steveAlexPanel">
             <div class="btns-filter">
                 <div data-f="all" class="clear-filters -br1">
-                    <p>Очистить фильтр</p>
+                    <p>Clear filter</p>
                   </div>
-                  <img data-f="steve" id="steve" title="Толстые руки у скина" src="./img/icons/steve.png" alt="">
-                  <img data-f="alex" id="alex" title="Тонкие руки у скина" src="./img/icons/alex.png" alt="">
+                  <img data-f="steve" id="steve" title="Thick arms in a skin" src="./img/icons/steve.png" alt="">
+                  <img data-f="alex" id="alex" title="Thin hands on the skin" src="./img/icons/alex.png" alt="">
             </div>
-          </div>                 
+          </div>               
     </div>
     <div class="main">
         <div class="ll">
-            <p>Использовать лучше на ПК.</p>
+            <p>It is best used on a PC.</p>
         </div>
         <div class="in">
             <div class="pre-skin">
@@ -52,11 +55,11 @@
                 </div>
                 <div class="skompil">
                     <label class="change-btn -br1" for="inputImage">
-                        <span id="labelText" title="Выберите файл...">Выберите файл</span>
+                        <span id="labelText" title="Select file...">Select file</span>
                         <input type="file" id="inputImage" accept="image/*">
                     </label>
-                    <div style="margin-left: 1rem;" class="skompil-btn -br1" title="Скомпилировать Ваш скин">
-                        <p id="compileButton" title="Скомпилировать Ваш скин" onclick="compileSkin()">Скомпилировать</p>
+                    <div style="margin-left: 1rem;" class="skompil-btn -br1" title="Compile your skin">
+                        <p id="compileButton" title="Compile your skin" onclick="compileSkin()">Compile</p>
                     </div>
                 </div>
             </div>
@@ -83,13 +86,13 @@
         </div>
     </div>
     <div id="cookie-notification">
-        <p>Для корректного нанесения скина, загружайте его без одежды. Если вы не будете соблюдать это правило, вам придется удалять лишние пиксели с вашего скина.</p>
+        <p>For correct skinning, load the skin without any clothes on. If you don't follow this rule, you will have to remove extra pixels from your skin.</p>
         <button id="close-cookie-notification" onclick="hideCookieNotification()">Закрыть</button>
     </div>
     <script src="./js/shoto.js"></script>
     <script src="./js/cookie.js"></script>
     <script>
-        console.log("⚠️ Нашли ошибку? Помоги исправить её на GitHub! https://github.com/skinbuildermd/skinbuildermd.github.io");
+        console.log("⚠️ Found a mistake? Help correct it to GitHub! https://github.com/skinbuildermd/skinbuildermd.github.io");
     </script>
 </body>
 </html>
