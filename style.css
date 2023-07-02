@@ -259,7 +259,7 @@ html {
     color: black;
 }
 .selected {
-    border: #ffffffe1 2px outset;
+    border: 2px solid #ffffffe1;
 }
 .installed img{
     width: 90px;
