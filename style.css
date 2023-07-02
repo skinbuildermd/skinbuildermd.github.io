@@ -13,14 +13,14 @@ html {
 .headline {
     display: flex;
     height: 55px;
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding-left: 28.5rem;
+    padding-right: 28.5rem;
     background-color: #141414;
     justify-content: space-between;
 }
 
 .logo1 img {
-    width: 200px;
+    width: 143px;
     height: 100%;
 }
 
