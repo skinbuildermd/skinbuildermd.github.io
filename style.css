@@ -309,7 +309,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--bar-col);
+    background-color: #111111;
     padding: .7rem;
     position: fixed;
     bottom: 0;
