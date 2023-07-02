@@ -314,12 +314,14 @@ html {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 98.8%;
+    width: 63rem;
+    padding-left: 28.5rem;
+    padding-right: 28.5rem;
 }
-#cookie-notification p {
+#cookie-notification h3 {
     margin: 0;
     color: #ffffff;
-    font-size: 1rem;
+    font-size: .9rem;
 }
 #close-cookie-notification {
     background-color: #ffffff;
