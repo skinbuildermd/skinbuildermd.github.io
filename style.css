@@ -6,8 +6,6 @@
     --br: 1rem;
     --bar-col: #141414;
 }
-html {
-}
 .headline {
     display: flex;
     height: 55px;
