@@ -7,8 +7,6 @@
     --bar-col: #141414;
 }
 html {
-    background-color: #111111;
-    
 }
 .headline {
     display: flex;
@@ -73,7 +71,10 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 858px;
+    height: 864px;
+    background-image: url(./img/background.svg);
+    background-position: 50%;
+    background-size: 100%;
 }
 .skin {
     background-color: var(--ui-color);

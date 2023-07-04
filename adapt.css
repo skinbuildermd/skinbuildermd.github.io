@@ -1,3 +1,9 @@
+@media only screen and (max-height: 808px){
+  .main {
+    height: 753px;
+  }
+}
+
 @media only screen and (max-width: 500px) {
     .all-cloat {
         margin-top: 0rem;
@@ -67,8 +73,13 @@
         height: 55px;
         padding-left: 0rem;
         padding-right: 0rem;
-        background-color: #141414;
+        background-color: #111111;
         justify-content: space-between;
+        width: 99%;
+      }
+      .logo1 a img {
+        width: 0px;
+        height: 0px;
       }
       .clear-filters {
         width: 0;
@@ -86,8 +97,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 10px;
+        width: 99%;
         padding: 0;
+        background-color: #111111;
+        background-image: none;
       }
       #cookie-notification {
         display: flex;
@@ -120,11 +133,11 @@
         font-size: 0;
       }
       .ll {
-        height: 419px;
+        height: 0px;
         display: flex;
         align-items: center;
         user-select: none;
-        margin-top: 38.85rem;
+        margin-top: 0;
         width: 25rem;
       }
       .ll p {
