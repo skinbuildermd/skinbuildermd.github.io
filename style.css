@@ -72,9 +72,7 @@ html {
     justify-content: center;
     align-items: center;
     height: 864px;
-    background-image: url(./img/background.svg);
-    background-position: 50%;
-    background-size: 100%;
+    background-color: #101110;
 }
 .skin {
     background-color: var(--ui-color);
