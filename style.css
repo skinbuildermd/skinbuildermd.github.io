@@ -6,6 +6,7 @@
     --br: 1rem;
     --bar-col: #141414;
     --otstyp1: 1rem;
+    --otstup2: 0 29rem;
 }
 ::-webkit-scrollbar {
     width: 5px;
@@ -48,7 +49,7 @@ html {
 .headline {
     display: flex;
     height: 55px;
-    padding: 0 29rem;
+    padding: var(--otstup2);
     background-color: #141414;
     justify-content: space-between;
 }
@@ -108,7 +109,7 @@ html {
     justify-content: center;
     align-items: center;
     height: 853px;
-    padding: 0 29rem;
+    padding: var(--otstup2);
 }
 .skin {
     display: flex;
@@ -355,13 +356,13 @@ html {
     justify-content: center;
     align-items: center;
     background-color: var(--bar-col);
-    padding: .7rem;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 63rem;
-    padding-left: 29rem;
-    padding-right: 29rem;
+    padding: var(--otstup2);
+    padding-top: .7rem;
+    padding-bottom: .7rem;
 }
 #cookie-notification p {
     margin: 0;
