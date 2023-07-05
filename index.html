@@ -22,9 +22,6 @@
             <a href="./">
                 <img src="./img/logo/skinbuilder-logo-full.svg" alt="лого">
             </a>
-            <!-- <div class="lang-sel">
-                <a href="/en"><img src="https://skinbuildermd.github.io/img/icons/en-flag.png"></a>
-            </div>   -->
         </div>
         <div class="steve-alex" id="steveAlexPanel">
             <div class="btns-filter">
@@ -58,7 +55,7 @@
                         <span id="labelText" title="Выберите файл...">Выберите файл</span>
                         <input type="file" id="inputImage" accept="image/*">
                     </label>
-                    <div style="margin-left: 1rem;" class="skompil-btn -br1" title="Скомпилировать Ваш скин">
+                    <div style="margin-left: 2rem;" class="skompil-btn -br1" title="Скомпилировать Ваш скин">
                         <p id="compileButton" title="Скомпилировать Ваш скин" onclick="compileSkin()">Скомпилировать</p>
                     </div>
                 </div>
@@ -71,7 +68,8 @@
                     <div class="-br1 c obuv" onclick="changeClothes('obuv')"></div>
                 </div>
                 <div class="all-cloat -br1">
-                    <div class="all-cloat-scroll">
+                    <div class="all-cloat-scroll-wrapper">
+                      <div class="all-cloat-scroll">
                         <div class="w -br1" data-skin="alex">
                             <img id="verh-go" src="./img/models/verh/verh_1.png" alt="">
                         </div>
@@ -84,14 +82,15 @@
                         <div class="w -br1" data-skin="alex">
                             <img id="verh-go" src="./img/models/verh/verh_4.png" alt="">
                         </div>
+
                     </div>
-                    
+                </div> 
             </div>
         </div>
     </div>
     <div id="cookie-notification">
-        <h3>Для верного наложения скина, загружайте его без одежды и выберайте ту одежду, которая не будет конфликтовать.</h3>
-        <button id="close-cookie-notification" onclick="hideCookieNotification()">Закрыть</button>
+        <p>Для верного наложения скина, загружайте его без одежды и выберайте ту одежду, которая не будет конфликтовать.</p>
+        <button id="close-cookie-notification" onclick="hideCookieNotification()">Принять</button>
     </div>
     <script src="./js/shoto.js"></script>
     <script src="./js/cookie.js"></script>
