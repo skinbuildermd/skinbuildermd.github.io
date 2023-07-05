@@ -116,7 +116,7 @@ html {
     align-items: center;
     flex-direction: column;
     background-color: var(--ui-color);
-    width: 25rem;
+    width: 22rem;
     height: 35rem;
     background-size: 111.5%;
     padding: var(--otstyp1);
