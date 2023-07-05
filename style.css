@@ -48,7 +48,7 @@ html {
 .headline {
     display: flex;
     height: 55px;
-    padding: 0 27rem;
+    padding: 0 29rem;
     background-color: #141414;
     justify-content: space-between;
 }
@@ -108,7 +108,7 @@ html {
     justify-content: center;
     align-items: center;
     height: 853px;
-    padding: 0 27rem;
+    padding: 0 29rem;
 }
 .skin {
     display: flex;
@@ -360,8 +360,8 @@ html {
     bottom: 0;
     left: 0;
     width: 63rem;
-    padding-left: 27rem;
-    padding-right: 27rem;
+    padding-left: 29rem;
+    padding-right: 29rem;
 }
 #cookie-notification p {
     margin: 0;
