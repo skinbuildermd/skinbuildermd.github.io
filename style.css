@@ -98,6 +98,7 @@ html {
     width: 25px;
     height: 25px;
     margin-left: .7rem;
+    border-radius: .3rem;
 }
 .btns-filter {
     display: flex;
