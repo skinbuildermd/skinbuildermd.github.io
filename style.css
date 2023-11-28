@@ -6,7 +6,9 @@
     --br: 1rem;
     --bar-col: #141414;
     --otstyp1: 1rem;
-    --otstup2: 0 29rem;
+    --otstup2: 0 23%;
+    --fw600: 600;
+    --MonsColor: #303030;
 }
 ::-webkit-scrollbar {
     width: 5px;
@@ -110,7 +112,7 @@ html {
     justify-content: center;
     align-items: center;
     height: 853px;
-    padding: var(--otstup2);
+    /* padding: var(--otstup2); */
 }
 .skin {
     display: flex;
@@ -131,14 +133,15 @@ html {
     align-items: center;
     background-color: #ffffff;
     height: 40px;
-    width: 120px;
     padding-right: .7rem;
     padding-left: .7rem;
     position: relative;
     overflow: hidden;
 }
 .change-btn span {
-    color: black;
+    font-weight: var(--fw600);
+    font-size: 1.53vh;
+    color: var(--MonsColor);
 }
 .change-btn input {
     position: absolute;
@@ -293,14 +296,15 @@ html {
     align-items: center;
     background-color: #ffffff;
     height: 40px;
-    width: 120px;
     padding-right: .7rem;
     padding-left: .7rem;
     position: relative;
     overflow: hidden;
 }
 .skompil-btn p{
-    color: black;
+    font-weight: var(--fw600);
+    font-size: 1.5vh;
+    color: var(--MonsColor);
 }
 .selected {
     border: 2px solid #ffffffe1;
@@ -386,7 +390,6 @@ html {
 .clear-filters {
     background-color: #ffffff;
     border: none;
-    color: #000000;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -395,9 +398,10 @@ html {
     margin-left: 1rem;
     border-radius: .7rem;
     padding: .5rem .7rem .5rem .7rem;
+    font-weight: var(--fw600);
 }
 .clear-filters p{
-    color: black;
+    color: var(--MonsColor);
 }
 #steve {
     cursor: pointer;
