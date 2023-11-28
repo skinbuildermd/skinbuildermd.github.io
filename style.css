@@ -52,7 +52,7 @@ html {
     display: flex;
     height: 55px;
     padding: var(--otstup2);
-    background-color: #141414;
+    background-color: #101110;
     justify-content: space-between;
 }
 
@@ -365,7 +365,7 @@ html {
     bottom: 0;
     left: 0;
     width: 63rem;
-    padding: var(--otstup2);
+    padding: 0 29rem;
     padding-top: .7rem;
     padding-bottom: .7rem;
 }
